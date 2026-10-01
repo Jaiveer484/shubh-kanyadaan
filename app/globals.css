@@ -29,7 +29,7 @@ p { line-height: 1.7; color: var(--muted); }
 .hero-pattern { position: absolute; right: -150px; top: 50px; width: 620px; height: 620px; opacity: .3; border-radius: 50%; background: repeating-conic-gradient(from 0deg, transparent 0 9deg, var(--gold-light) 10deg 11deg, transparent 12deg 20deg); mask-image: radial-gradient(transparent 0 42%, #000 43% 44%, transparent 45% 50%, #000 51% 52%, transparent 53%); }
 .hero-copy { position: relative; z-index: 1; padding-top: 36px; }
 .hero h1 { color: var(--maroon); font-size: clamp(65px, 10vw, 130px); line-height: .85; margin: 0; }
-.hero-subtitle { font: 500 25px var(--font-display); color: var(--gold); margin: 15px 0 20px; letter-spacing: .08em; }
+.hero-subtitle { font: 500 25px var(--font-display); color: var(--gold); margin: 27px 0 20px; letter-spacing: .08em; }
 .hero-lead { font: 18px var(--font-display); color: var(--muted); }
 .couple { display: flex; align-items: center; gap: 14px; margin: 28px 0; color: var(--maroon); font: 500 25px var(--font-display); }
 .couple b { color: #c35b58; font: 30px var(--font-sans); }
