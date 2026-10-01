@@ -4,7 +4,7 @@ export const weddingConfig = {
   brideName: "Sneh Sharma",
   groomName: "Yogesh Sharma",
   weddingDate: "2026-11-20T18:00:00+05:30",
-  weddingTime: "6:00 PM onwards",
+  weddingTime: "8:00 PM onwards",
   venue: "IVANSHI GREEN GARDEN",
   city: "Palwal, Haryana, India",
   websiteUrl: "https://jaiveer484.github.io/shubh-kanyadaan",
