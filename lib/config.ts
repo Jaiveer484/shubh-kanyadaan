@@ -3,9 +3,9 @@ export type GalleryImage = { src: string; alt: string };
 export const weddingConfig = {
   brideName: "Sneh Sharma",
   groomName: "Yogesh Sharma",
-  weddingDate: "2027-01-01T18:00:00+05:30",
+  weddingDate: "2026-11-20T18:00:00+05:30",
   weddingTime: "6:00 PM onwards",
-  venue: "The Rosewood Courtyard",
+  venue: "IVANSHI GREEN GARDEN",
   city: "Palwal, Haryana, India",
   websiteUrl: "https://jaiveer484.github.io/shubh-kanyadaan",
   familyMessage:
