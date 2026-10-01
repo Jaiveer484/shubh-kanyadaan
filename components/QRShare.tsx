@@ -13,10 +13,19 @@ export default function QRShare() {
       return;
     }
 
+    setShareMessage("Copying celebration link…");
+    let timeoutId: number | undefined;
     try {
-      await navigator.clipboard.writeText(weddingConfig.websiteUrl);
-      setShareMessage("Celebration link copied!");
+      const copied = await Promise.race([
+        navigator.clipboard.writeText(weddingConfig.websiteUrl).then(() => true, () => false),
+        new Promise<boolean>((resolve) => {
+          timeoutId = window.setTimeout(() => resolve(false), 3000);
+        })
+      ]);
+      if (timeoutId !== undefined) window.clearTimeout(timeoutId);
+      setShareMessage(copied ? "Celebration link copied!" : `Copy this link to share: ${weddingConfig.websiteUrl}`);
     } catch {
+      if (timeoutId !== undefined) window.clearTimeout(timeoutId);
       setShareMessage(`Couldn't copy the link. Copy this address: ${weddingConfig.websiteUrl}`);
     }
   };
@@ -34,11 +43,15 @@ export default function QRShare() {
       return;
     }
 
+    setShareMessage("Opening share options…");
     try {
       await navigator.share(shareData);
       setShareMessage("Celebration shared!");
     } catch (error) {
-      if (error instanceof DOMException && error.name === "AbortError") return;
+      if (error instanceof DOMException && error.name === "AbortError") {
+        setShareMessage("");
+        return;
+      }
       await copyLink();
     }
   };
