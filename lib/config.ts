@@ -13,4 +13,4 @@ export const weddingConfig = {
   galleryImages: [] as GalleryImage[]
 };
 
-export const relationshipOptions = ["Family", "Relative", "Friend", "Well-wisher"] as const;
+export const weddingDateDisplay = new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "long", year: "numeric", timeZone: "UTC" }).format(new Date(`${weddingConfig.weddingDate.slice(0, 10)}T12:00:00Z`)); export const relationshipOptions = ["Family", "Relative", "Friend", "Well-wisher"] as const;
